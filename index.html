@@ -23,10 +23,8 @@
 </div>
 
 <script>
-const form = document.getElementById('registrationForm');
-
-// Your deployed Google Apps Script URL
-const url = "https://script.google.com/macros/s/AKfycbwSyFSCXnBsl9GbLQFpdrg9TQJGP9iXFkx_QPDnrKiomiSRWnzXklzFGiYWNKyR1qDd-w/exec";
+  const form = document.getElementById('registrationForm');
+const url = "https://script.google.com/macros/s/AKfycbyOwgx_41R8HWZtlYTMq_Mur7H1zkIFJn1WTiFR3OPzvrT0ugGxy2_V8KOTzhuTqT8rWg/exec"; // copy from Apps Script deployment
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -37,13 +35,14 @@ form.addEventListener('submit', function(e) {
     method: "POST",
     body: data
   })
-  .then(response => response.json())  // expecting JSON response from Apps Script
+  .then(response => response.json())
   .then(resp => {
     alert("Form submitted successfully!");
-    form.reset();  // clear the form after submission
+    form.reset();
   })
   .catch(err => alert("Error submitting form: " + err));
 });
+
 </script>
 </body>
 </html>
