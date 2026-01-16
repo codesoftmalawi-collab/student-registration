@@ -11,6 +11,7 @@
       <p>Student Registration</p>
 
       <form id="registrationForm">
+        <!-- Email or Phone -->
         <input
           type="text"
           name="emailOrPhone"
@@ -18,13 +19,7 @@
           required
         >
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          required
-        >
-
+        <!-- Password -->
         <input
           type="password"
           name="password"
@@ -43,7 +38,8 @@
     const form = document.getElementById("registrationForm");
     const msg = document.getElementById("msg");
 
-    const url = "https://script.google.com/macros/s/AKfycbwNeRGzYLKu5k15-87yZhE3zPVougVQiV9JeFx5RO3SC8ogpeR9gWL6SZjCPb6UV4ZRzA/exec";
+    // 🔹 Replace with your redeployed Web App URL
+    const url = "https://script.google.com/macros/s/AKfycbyQ9Bd_IwiARTQnMgO-ByLATJygQQSS7HUcbpGdKJWvoRHxufVSO-NNF0gJkhNIAw3hRA/exec";
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -52,10 +48,14 @@
 
       fetch(url, {
         method: "POST",
-        body: data
+        body: data,
+        mode: "cors",
+        redirect: "follow"
       })
-      .then(res => res.json())
-      .then(res => {
+      .then(res => res.text())
+      .then(text => {
+        const res = JSON.parse(text);
+
         if (res.result === "success") {
           msg.innerText = "Registration successful!";
           msg.style.color = "green";
@@ -65,7 +65,8 @@
           msg.style.color = "red";
         }
       })
-      .catch(() => {
+      .catch(err => {
+        console.error(err);
         msg.innerText = "Server error!";
         msg.style.color = "red";
       });
