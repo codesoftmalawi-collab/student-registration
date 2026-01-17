@@ -104,13 +104,15 @@ body {
   font-weight: bold;
   text-align: center;
   font-size: 14px;
-  width: 100%; /* Full-width button like Facebook */
-  margin-top: 10px; /* Margin for spacing */
+  width: 100%; /* Ensures full width button like 'Log In' */
+  box-sizing: border-box; /* Makes sure padding doesn't overflow */
+  margin-top: 10px; /* Margin for proper spacing */
 }
 
 .links a:nth-child(3):hover {
   background-color: #36a420; /* Darker green on hover */
 }
+
 
 /* Footer / login link */
 .card .footer {
