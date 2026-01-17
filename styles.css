@@ -1,95 +1,115 @@
+/* =======================
+   Global styles
+   ======================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5; /* Facebook light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    /* Global */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5; /* Facebook page background */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+/* =======================
+   Container & Card
+   ======================= */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
 
-    .container {
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-    }
+.card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
 
-    /* Card */
-    .card {
-      background-color: #fff;
-      padding: 40px 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      text-align: center;
-    }
+/* =======================
+   Facebook header
+   ======================= */
+.facebook-title {
+  color: #1877f2;  /* Official Facebook blue */
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-    .card h1 {
-      margin-bottom: 10px;
-      color: #1877f2; /* Facebook blue */
-      font-size: 28px;
-    }
+/* =======================
+   Subtitle
+   ======================= */
+.card p {
+  margin-bottom: 30px;
+  color: #606770;
+  font-size: 14px;
+}
 
-    .card p {
-      margin-bottom: 30px;
-      color: #606770;
-      font-size: 14px;
-    }
+/* =======================
+   Form inputs
+   ======================= */
+.card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 
-    /* Inputs */
-    .card input {
-      width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 15px;
-      border: 1px solid #dddfe2;
-      border-radius: 6px;
-      font-size: 16px;
-    }
+.card input:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 2px #1877f2;
+}
 
-    .card input:focus {
-      outline: none;
-      border-color: #1877f2;
-      box-shadow: 0 0 2px #1877f2;
-    }
+/* =======================
+   Submit button
+   ======================= */
+.card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    /* Button */
-    .card button {
-      width: 100%;
-      padding: 12px;
-      background-color: #1877f2; /* Facebook blue */
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.card button:hover {
+  background-color: #166fe5;
+}
 
-    .card button:hover {
-      background-color: #166fe5; /* Slightly darker blue on hover */
-    }
+/* =======================
+   Submission message
+   ======================= */
+#msg {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #f02849; /* red for error */
+}
 
-    #msg {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #f02849; /* Error/red color */
-    }
+/* =======================
+   Footer / login link
+   ======================= */
+.card .footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #606770;
+}
 
-    /* Optional: small footer link */
-    .card .footer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #606770;
-    }
+.card .footer a {
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .card .footer a {
-      color: #1877f2;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .card .footer a:hover {
-      text-decoration: underline;
-    }
-
+.card .footer a:hover {
+  text-decoration: underline;
+}
