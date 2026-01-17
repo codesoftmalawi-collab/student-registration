@@ -41,11 +41,13 @@ body {
 /* =======================
    Subtitle
    ======================= */
+/* Student Registration subtitle matches Facebook blue */
 .card p {
   margin-bottom: 30px;
-  color: #606770;
+  color: #1877f2; /* same color as Facebook header */
   font-size: 14px;
 }
+
 
 /* =======================
    Form inputs
