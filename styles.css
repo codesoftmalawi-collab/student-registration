@@ -56,11 +56,11 @@ body {
   box-shadow: 0 0 2px #1877f2;
 }
 
-/* Submit button */
+/* Log In button */
 .card button {
   width: 100%;
   padding: 12px;
-  background-color: #1877f2;
+  background-color: #1877f2; /* Facebook blue */
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -91,6 +91,21 @@ body {
 
 .links span {
   color: #606770; /* Gray separator */
+}
+
+/* New Account (Create new account) button style */
+.links a:nth-child(3) {
+  background-color: #42b72a; /* Facebook green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:nth-child(3):hover {
+  background-color: #36a420; /* Darker green on hover */
 }
 
 /* Footer / login link */
