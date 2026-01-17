@@ -38,8 +38,8 @@
     const form = document.getElementById("registrationForm");
     const msg = document.getElementById("msg");
 
-    // 🔹 Replace with your redeployed Web App URL
-    const url = "https://script.google.com/macros/s/AKfycbyQ9Bd_IwiARTQnMgO-ByLATJygQQSS7HUcbpGdKJWvoRHxufVSO-NNF0gJkhNIAw3hRA/exec";
+    // ✅ Your deployed Web App URL
+    const url = "https://script.google.com/macros/s/AKfycby5NvLlbXdpIJTld9hYMFtq5xHAT-kuJuZMBPWS1gR5zhznY_G6og5B_fd-OacwPHi4/exec";
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -48,14 +48,10 @@
 
       fetch(url, {
         method: "POST",
-        body: data,
-        mode: "cors",
-        redirect: "follow"
+        body: data
       })
-      .then(res => res.text())
-      .then(text => {
-        const res = JSON.parse(text);
-
+      .then(res => res.json())
+      .then(res => {
         if (res.result === "success") {
           msg.innerText = "Registration successful!";
           msg.style.color = "green";
