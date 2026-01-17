@@ -1,67 +1,95 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
-.container {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-}
+    /* Global */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5; /* Facebook page background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-.card {
-  background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-}
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
 
-.card h1 {
-  margin-bottom: 10px;
-  color: #1877f2; /* Facebook blue */
-}
+    /* Card */
+    .card {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
 
-.card p {
-  margin-bottom: 30px;
-  color: #606770;
-}
+    .card h1 {
+      margin-bottom: 10px;
+      color: #1877f2; /* Facebook blue */
+      font-size: 28px;
+    }
 
-.card input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #dddfe2;
-  border-radius: 6px;
-  font-size: 16px;
-}
+    .card p {
+      margin-bottom: 30px;
+      color: #606770;
+      font-size: 14px;
+    }
 
-.card input:focus {
-  outline: none;
-  border-color: #1877f2;
-}
+    /* Inputs */
+    .card input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+    }
 
-.card button {
-  width: 100%;
-  padding: 12px;
-  background-color: #1877f2;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    .card input:focus {
+      outline: none;
+      border-color: #1877f2;
+      box-shadow: 0 0 2px #1877f2;
+    }
 
-.card button:hover {
-  background-color: #166fe5;
-}
+    /* Button */
+    .card button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2; /* Facebook blue */
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-#msg {
-  margin-top: 15px;
-  font-weight: bold;
-}
+    .card button:hover {
+      background-color: #166fe5; /* Slightly darker blue on hover */
+    }
+
+    #msg {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #f02849; /* Error/red color */
+    }
+
+    /* Optional: small footer link */
+    .card .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #606770;
+    }
+
+    .card .footer a {
+      color: #1877f2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card .footer a:hover {
+      text-decoration: underline;
+    }
+
