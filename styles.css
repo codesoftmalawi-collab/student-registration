@@ -102,9 +102,10 @@ body {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
-  width: 100%; /* Full-width button like Facebook */
   text-align: center;
   font-size: 14px;
+  width: 100%; /* Full-width button like Facebook */
+  margin-top: 10px; /* Margin for spacing */
 }
 
 .links a:nth-child(3):hover {
