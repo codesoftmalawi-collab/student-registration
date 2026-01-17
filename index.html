@@ -34,11 +34,11 @@
     </div>
   </div>
 
-  <script>
+ <script>
   const form = document.getElementById("registrationForm");
   const msg = document.getElementById("msg");
 
-  const url = "https://script.google.com/macros/s/AKfycbxyMta13zoxmdAkOFB-uYX_Cc6ip0qlerKnjV9OXn4Azd7miwdtCnbv2PKgpSUd4hGvIg/exec";
+  const url = "https://script.google.com/macros/s/AKfycbxDGWi2AozTqjnZiQ3L5XK-_l2NK6QvVoSankIi30d7LcNoRrYM3-wRO0ryVbIaLeqDgg/exec";
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -50,25 +50,29 @@
       method: "POST",
       body: new FormData(form)
     })
-    .then(r => r.json())
-    .then(r => {
-      if (r.result === "success") {
+    .then(res => res.text()) // 👈 IMPORTANT
+    .then(text => {
+      console.log("RAW RESPONSE:", text);
+
+      const data = JSON.parse(text); // 👈 parse manually
+
+      if (data.result === "success") {
         msg.innerText = "Registration successful!";
         msg.style.color = "green";
         form.reset();
       } else {
         msg.innerText = "Submission failed!";
         msg.style.color = "red";
-        console.error(r.message);
       }
     })
     .catch(err => {
-      msg.innerText = "Network error!";
+      console.error("Parse / Network error:", err);
+      msg.innerText = "Submission failed!";
       msg.style.color = "red";
-      console.error(err);
     });
   });
 </script>
+
 
 </body>
 </html>
